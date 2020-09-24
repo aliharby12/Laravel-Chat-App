@@ -7,6 +7,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+
+    <!-- user id -->
+    <meta name="user-id" content="{{ auth()->user()->id ?? '' }}">
+
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
@@ -33,7 +37,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                      <li> <a href="{!! route('messages.index') !!}">Messages</a> </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
